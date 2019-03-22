@@ -1,5 +1,8 @@
-<div class="container">
-  <h1 class="title">
-    {{ 'PAGES.HOME.TITLE' | translate }}
-  </h1>
+<div class="columns">
+  <div class="column">
+    <app-text-tagger-view [text]="computed"></app-text-tagger-view>
+  </div>
+  <div class="column">
+    <app-raw-view [text]="computed"></app-raw-view>
+  </div>
 </div>

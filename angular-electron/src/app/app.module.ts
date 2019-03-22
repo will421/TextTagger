@@ -22,7 +22,8 @@ import { HomeComponent } from './components/home/home.component';
 import { MaterialModule } from './material.module';
 import { Home2Component } from './home2/home2.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { TextTaggerViewComponent } from './text-tagger-view/text-tagger-view.component';
+import { RawViewComponent } from './raw-view/raw-view.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -34,7 +35,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     HomeComponent,
     WebviewDirective,
-    Home2Component
+    Home2Component,
+    TextTaggerViewComponent,
+    RawViewComponent
   ],
   imports: [
     BrowserModule,
@@ -51,11 +54,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserAnimationsModule,
     MaterialModule,
     LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule
   ],
   providers: [ElectronService],
   bootstrap: [AppComponent]
