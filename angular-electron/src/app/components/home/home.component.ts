@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.computed = this.data.match(/\w+|\W+/g)
+    this.computed = this.data.match(/[A-Za-zÀ-ÖØ-öø-ÿ]+|[^A-Za-zÀ-ÖØ-öø-ÿ]+/g)
       .map(el => {
         let type;
         if(el.match(/\w+/)){
